@@ -23,7 +23,7 @@ public class AddTwoValuesTests {
         int a = 10;
         int b = 5;
         int exp = 15;
-        assertEquals(String.format("%s+%s must be %s," + a,b,exp), exp, calc.add(a, b));
+        assertEquals(String.format("%s+%s must be %s", a, b, exp), exp, calc.add(a, b));
     }
 
     @Test
@@ -31,7 +31,7 @@ public class AddTwoValuesTests {
         int a = -10;
         int b = -5;
         int exp = -15;
-        assertEquals(String.format("%s+%s must be %s," + a,b,exp), exp, calc.add(a, b)));
+        assertEquals(String.format("%s+%s must be %s", a, b, exp), exp, calc.add(a, b));
     }
     //TODO
     //add new tests for add() method
@@ -41,7 +41,7 @@ public class AddTwoValuesTests {
         int a = 10;
         int b = -5;
         int exp = 5;
-        assertEquals(String.format("%s+%s must be %s," + a,b,exp), exp, calc.add(a, b));
+        assertEquals(String.format("%s+%s must be %s", a, b, exp), exp, calc.add(a, b));
     }
 
     //TODO
@@ -49,15 +49,14 @@ public class AddTwoValuesTests {
 
     @Test
     public void testDivisionTwoPositiveValues() {
-        int a = 10;
+        int a = 2;
         int b = 5;
-        int exp = 5;
-        assertEquals(String.format("%s+%s must be %s," + a,b,exp), exp, calc.add(a, b));
+        double exp = 0.4;
+        assertEquals(String.format("%s/%s must be %s", a, b, exp), exp, calc.division(a, b));
     }
 
     @After
     public void consolePrintAfter() {
         System.out.println("Tests finished!!!");
-
     }
 }
