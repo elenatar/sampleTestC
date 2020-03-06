@@ -20,19 +20,40 @@ public class AddTwoValuesTests {
 
     @Test
     public void testAddTwoPositiveValues() {
-        assertEquals("10 + 5 must be 15", 15, calc.add(10, 5));
+        int a = 10;
+        int b = 5;
+        int exp = 15;
+        assertEquals(String.format("%s+%s must be %s," + a,b,exp), exp, calc.add(a, b));
     }
 
     @Test
     public void testAddTwoNegativeValues() {
-        assertEquals("-10 + -5 must be -15", -15, calc.add(-10, -5));
+        int a = -10;
+        int b = -5;
+        int exp = -15;
+        assertEquals(String.format("%s+%s must be %s," + a,b,exp), exp, calc.add(a, b)));
     }
-
     //TODO
     //add new tests for add() method
 
+    @Test
+    public void testAddOnePositiveAndOneNegativeValue() {
+        int a = 10;
+        int b = -5;
+        int exp = 5;
+        assertEquals(String.format("%s+%s must be %s," + a,b,exp), exp, calc.add(a, b));
+    }
+
     //TODO
     //add tests for new methods
+
+    @Test
+    public void testDivisionTwoPositiveValues() {
+        int a = 10;
+        int b = 5;
+        int exp = 5;
+        assertEquals(String.format("%s+%s must be %s," + a,b,exp), exp, calc.add(a, b));
+    }
 
     @After
     public void consolePrintAfter() {

@@ -18,8 +18,16 @@ public class Calculator {
     }
 
     //TODO
-    //add methods for multiply, division, subtraction, square root, x^2
+    //add methods for multiply, division, subtraction, square root, x^2, divide 0
+    public double division(int a, int b) {
 
+        return a / b;
+    }
+
+    public int subtraction(int a, int b) {
+
+        return a - b;
+    }
 }
 
 
