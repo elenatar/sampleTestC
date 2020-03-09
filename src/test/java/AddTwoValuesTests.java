@@ -33,7 +33,7 @@ public class AddTwoValuesTests {
         int exp = -15;
         assertEquals(String.format("%s+%s must be %s", a, b, exp), exp, calc.add(a, b));
     }
-    //TODO
+
     //add new tests for add() method
 
     @Test
@@ -44,15 +44,92 @@ public class AddTwoValuesTests {
         assertEquals(String.format("%s+%s must be %s", a, b, exp), exp, calc.add(a, b));
     }
 
-    //TODO
     //add tests for new methods
 
     @Test
-    public void testDivisionTwoPositiveValues() {
-        int a = 2;
+    public void testMultiplyTwoPositiveValues() {
+        int a = 10;
         int b = 5;
-        double exp = 0.4;
+        int exp = 50;
+        assertEquals(String.format("%s*%s must be %s", a, b, exp), exp, calc.multiply(a, b));
+    }
+
+    @Test
+    public void testMultiplyTwoNegativeValues() {
+        int a = -10;
+        int b = -5;
+        int exp = 50;
+        assertEquals(String.format("%s*%s must be %s", a, b, exp), exp, calc.multiply(a, b));
+    }
+
+    @Test
+    public void testMultiplyOnePositiveAndOneNegativeValue() {
+        int a = -10;
+        int b = 5;
+        int exp = -50;
+        assertEquals(String.format("%s*%s must be %s", a, b, exp), exp, calc.multiply(a, b));
+    }
+
+    @Test
+    public void testDivisionTwoPositiveValues() {
+        int a = 5;
+        int b = 2;
+        double exp = 2.5;
         assertEquals(String.format("%s/%s must be %s", a, b, exp), exp, calc.division(a, b));
+    }
+
+    @Test
+    public void testDivisionTwoNegativeValues() {
+        int a = -5;
+        int b = -2;
+        double exp = 2.5;
+        assertEquals(String.format("%s/%s must be %s", a, b, exp), exp, calc.division(a, b));
+    }
+
+    @Test
+    public void testDivisionOnePositiveAndOneNegativeValue() {
+        int a = 5;
+        int b = -2;
+        double exp = -2.5;
+        assertEquals(String.format("%s/%s must be %s", a, b, exp), exp, calc.division(a, b));
+    }
+
+    @Test
+    public void testSubtractionTwoPositiveValues() {
+        int a = 10;
+        int b = 5;
+        int exp = 5;
+        assertEquals(String.format("%s-%s must be %s", a, b, exp), exp, calc.subtraction(a, b));
+    }
+
+    @Test
+    public void testSubtractionTwoNegativeValues() {
+        int a = -10;
+        int b = -5;
+        int exp = -5;
+        assertEquals(String.format("%s-%s must be %s", a, b, exp), exp, calc.subtraction(a, b));
+    }
+
+    @Test
+    public void testSubtractionOnePositiveAndOneNegativeValue() {
+        int a = 10;
+        int b = -5;
+        int exp = 15;
+        assertEquals(String.format("%s-%s must be %s", a, b, exp), exp, calc.subtraction(a, b));
+    }
+
+    @Test
+    public void squareRootOfPositiveValue() {
+        int a = 10;
+        double exp = 3.1622776601683795;
+        assertEquals(String.format("square root of %s must be %s", a, exp), exp, calc.squareRoot(a));
+    }
+
+    @Test
+    public void squareOfPositiveValue() {
+        int a = 10;
+        int exp = 100;
+        assertEquals(String.format("square of %s must be %s", a, exp), exp, calc.square(a));
     }
 
     @After

@@ -15,9 +15,9 @@ public class Calculator {
         return a * b;
     }
 
-    //TODO
-    //add methods for multiply, division, subtraction, square root, x^2, divide 0
+    //add methods for multiply, division, subtraction, square root, x^2, divide 0, square root -2
     public double division(double a, int b) {
+
         return a / b;
     }
 
@@ -30,7 +30,7 @@ public class Calculator {
     }
 
     public int square(int a) {
-        return a ^ 2;
+        return a * a;
     }
 }
 
