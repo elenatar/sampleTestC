@@ -94,7 +94,7 @@ public class AddTwoValuesTests {
         assertEquals(String.format("%s/%s must be %s", a, b, exp), exp, calc.division(a, b));
     }
 
-    @Test
+       @Test
     public void testSubtractionTwoPositiveValues() {
         int a = 10;
         int b = 5;
@@ -119,6 +119,13 @@ public class AddTwoValuesTests {
     }
 
     @Test
+    public void squareOfPositiveValue() {
+        int a = 10;
+        int exp = 100;
+        assertEquals(String.format("square of %s must be %s", a, exp), exp, calc.square(a));
+    }
+
+    @Test
     public void squareRootOfPositiveValue() {
         int a = 10;
         double exp = 3.1622776601683795;
@@ -126,10 +133,26 @@ public class AddTwoValuesTests {
     }
 
     @Test
-    public void squareOfPositiveValue() {
-        int a = 10;
-        int exp = 100;
-        assertEquals(String.format("square of %s must be %s", a, exp), exp, calc.square(a));
+    public void squareRootOfNegativeValue() {
+        int a = -10;
+        Exception exp = new ArithmeticException("square root of negative number");
+        try {
+            assertEquals(String.format("square root of %s must be %s", a, exp), exp, calc.squareRoot(a));
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    @Test
+    public void testDivisionByZero() {
+        int a = 5;
+        int b = 0;
+        Exception exp = new ArithmeticException("/ by zero");
+        try {
+            assertEquals(String.format("%s/%s must be %s", a, b, exp), exp, calc.division(a, b));
+        } catch (ArithmeticException e) {
+            System.out.println(e);
+        }
     }
 
     @After
