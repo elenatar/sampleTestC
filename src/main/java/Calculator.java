@@ -17,9 +17,6 @@ public class Calculator {
 
     //add methods for multiply, division, subtraction, square root, x^2, divide 0, square root -2
     public double division(double a, int b) {
-        if(b == 0){
-            throw new ArithmeticException("/ by zero");
-        }
         return a / b;
     }
 
@@ -28,9 +25,6 @@ public class Calculator {
     }
 
     public double squareRoot(double a) {
-        if(a < 0){
-            throw new ArithmeticException("square root of negative number");
-        }
         return Math.sqrt(a);
     }
 

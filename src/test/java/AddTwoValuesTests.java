@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 /**
  * Created by kate on 1/12/16.
@@ -134,25 +135,15 @@ public class AddTwoValuesTests {
 
     @Test
     public void squareRootOfNegativeValue() {
-        int a = -10;
-        Exception exp = new ArithmeticException("square root of negative number");
-        try {
-            assertEquals(String.format("square root of %s must be %s", a, exp), exp, calc.squareRoot(a));
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+        int a = -5;
+        assertTrue(String.format("%s square root", a), Double.isNaN(calc.squareRoot(a)));
     }
 
     @Test
     public void testDivisionByZero() {
         int a = 5;
         int b = 0;
-        Exception exp = new ArithmeticException("/ by zero");
-        try {
-            assertEquals(String.format("%s/%s must be %s", a, b, exp), exp, calc.division(a, b));
-        } catch (ArithmeticException e) {
-            System.out.println(e);
-        }
+        assertTrue(String.format("%s/%s", a, b), Double.isInfinite(calc.division(a, b)));
     }
 
     @After
