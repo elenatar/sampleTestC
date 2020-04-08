@@ -34,7 +34,6 @@ public class AddTwoValuesTests {
         int exp = -15;
         assertEquals(String.format("%s+%s must be %s", a, b, exp), exp, calc.add(a, b));
     }
-    //TODO
     //add new tests for add() method
 
     @Test
